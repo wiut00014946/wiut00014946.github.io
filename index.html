@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="This website was created to fulfill Web Technology module’s requirements and does not represent an actual company or service">
+        <meta name="keywords" content="Travel Blog">
+        <link rel="stylesheet" type="text/css" href="styles/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <title>Travel Blog</title>
+    </head>
+    <body>
+        <!-- header html structure -->
+        <header>
+            <a href="index.html">
+                <div class="logo">Travel Blog</div>
+            </a>
+            <button id="menu">
+                <img id="menu-icon" src="images/menu.png" alt="menu">
+            </button>
+            <div class="search">
+                <form action="" method="post" id="search-form">
+                    <input type="text" name="search-input" id="search-input" placeholder="search article">
+                    <button type="submit" name="search-button" id="search-button">
+                        <img src="images/search.png" alt="search">
+                    </button>
+                </form>
+            </div>
+            <div id="search-result"></div>
+        </header>
+        <section>
+            <!-- main html structure -->
+            <main>
+                <article>
+                    <div class="article-image"><img src="images/post_one.jpg" alt="blog post image"></div>
+                    <div class="article-info">
+                        <h1 class="article-title">Best countries to visit this year</h1>
+                        <div class="article-text">Here’s a list of some of the must visit countries this year: Bali, Indonesia; New Orleans; Kerry, Ireland; Marrakesh, Morocco; Sydney; etc.</div>
+                        <div class="article-date">12:00 14.11.2021</div>
+                        <button class="article-button" id="article-one-button">Read more</button>
+                    </div>
+                    <div class="article-extended" id="article-one-extended"></div>
+                </article>
+                <article>
+                    <div class="article-image"><img src="images/post_two.jpg" alt="blog post image"></div>
+                    <div class="article-info">
+                        <h1 class="article-title">Most expensive countries in the world</h1>
+                        <div class="article-text">Here’s a list of some of the most expensive countries to live in world: Switzerland, Bermuda, Iceland, Norway, Luxembourg, etc.</div>
+                        <div class="article-date">17:00 16.11.2021</div>
+                        <button class="article-button" id="article-two-button">Read more</button>
+                    </div>
+                    <div class="article-extended" id="article-two-extended"></div>
+                </article>
+                <article>
+                    <div class="article-image"><img src="images/post_three.jpg" alt="blog post image"></div>
+                    <div class="article-info">
+                        <h1 class="article-title">Exploring the highest mountain on Earth - Mount Everest</h1>
+                        <div class="article-text">Mount Everest is Earth's highest mountain above sea level, located in the Mahalangur Himal sub-range of the Himalayas. Mount Everest attracts many climbers, including highly experienced mountaineers.</div>
+                        <div class="article-date">15:00 18.11.2021</div>
+                        <button class="article-button" id="article-three-button">Read more</button>
+                    </div>
+                    <div class="article-extended" id="article-three-extended"></div>
+                </article>
+            </main>
+            <!-- sidebar html structure -->
+            <aside>
+                <h1 class="links-heading">Useful links</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="link-active">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="team.html">Our team</a></li>
+                        <li><a href="subscription.html">Subscription</a></li>
+                        <li><a href="contactform.html">Contact form</a></li>
+                        <li><a href="contacts.html">Contact details</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </section>
+        <!-- footer html structure -->
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="team.html">Our team</a></li>
+                    <li><a href="subscription.html">Subscription</a></li>
+                    <li><a href="contactform.html">Contact form</a></li>
+                    <li><a href="contacts.html">Contact details</a></li>
+                </ul>
+            </nav>
+            <div class="footer-text">This website was created to fulfill Web Technology module’s requirements and does not represent an actual company or service</div>
+            <div class="footer-text">&#169;Copyright 2021</div>
+        </footer>
+        <script src="scripts/scripts.js"></script>
+        <script src="scripts/menu.js"></script>
+        <script src="scripts/readmore.js"></script>
+    </body>
+</html>

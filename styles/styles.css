@@ -1,0 +1,789 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    background-color: rgb(242, 242, 242);
+}
+a, a:hover, a:visited {
+    text-decoration: none;
+}
+input, textarea, button {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+img {
+    width: 100%;
+}
+header, main, aside, footer {
+    float: left;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px 1px rgb(230, 230, 230);
+}
+section {
+    display: flex;
+    width: 100%;
+}
+/* header styling */
+header {
+    float: left;
+    width: 96%;
+    margin: 10px 2% 0;
+}
+.logo {
+    float: left;
+    margin: 10px 10px 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: rgb(0, 92, 230);
+}
+#menu {
+    float: right;
+    width: 38px;
+    height: 38px;
+    margin: 5px 8px 0;
+    border: none;
+    background-color: rgb(255, 255, 255);
+}
+.search {
+    float: right;
+    width: 80%;
+    margin: 10px 10%;
+}
+#search-input {
+    float: left;
+    width: calc(100% - 50px);
+    padding: 8px 20px;
+    font-size: 18px;
+    border: 1px solid rgb(0, 92, 230);
+    border-radius: 100px 0 0 100px;
+    box-sizing: border-box;
+    outline: none;
+}
+#search-button {
+    float: left;
+    width: 50px;
+    height: 40px;
+    padding: 4px 12px 4px 6px;
+    border: none;
+    border-radius: 0 100px 100px 0;
+    background-color: rgb(0, 92, 230);
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+}
+#search-button img {
+    width: 32px;
+    height: 32px;
+}
+#search-result {
+    float: left;
+    width: 80%;
+    margin: 0 10%;
+}
+.search-results {
+    padding: 0 0 10px 0;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+.search-result {
+    padding: 0 0 10px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: rgb(0, 92, 230);
+}
+/* main styling */
+main {
+    width: 96%;
+    margin: 10px 2% 0;
+    padding: 8px;
+    box-sizing: border-box;
+}
+/* sidebar styling */
+aside {
+    position: fixed;
+    display: none;
+    float: left;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+.links-heading {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 92, 230);
+    box-sizing: border-box;
+}
+aside nav ul {
+    float: left;
+    padding: 10px 0;
+}
+aside nav ul li {
+    float: left;
+    width: 100%;
+    list-style: none;
+}
+aside nav ul li a {
+    float: left;
+    width: 80%;
+    margin: 4px 10%;
+    padding: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 100px;
+    color: rgb(0, 92, 230);
+    background-color: rgb(242, 242, 242);
+}
+.link-active {
+    padding: 9px 8px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 92, 230);
+}
+/* footer styling */
+footer {
+    float: left;
+    width: 96%;
+    margin: 10px 2%;
+    padding: 10px 0;
+}
+footer nav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 5%;
+    padding: 8px;
+}
+footer nav ul li {
+    padding: 4px 0;
+    font-size: 16px;
+    list-style: none;
+}
+footer nav ul li a {
+    color: rgb(0, 92, 230);
+}
+.footer-text {
+    padding: 8px;
+    font-size: 16px;
+    text-align: center;
+}
+/* home page styling */
+article {
+    float: left;
+    width: 100%;
+}
+.article-image {
+    float: left;
+    width: 38%;
+    margin: 0 2% 0 0;
+}
+.article-info {
+    float: left;
+    width: 60%;
+}
+.article-title {
+    float: left;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+}
+.article-text {
+    float: left;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 16px;
+}
+.article-date {
+    float: left;
+    width: 100%;
+    font-size: 14px;
+}
+.article-button {
+    float: right;
+    margin: 10px 0;
+    padding: 6px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 100px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 92, 230);
+    outline: none;
+    cursor: pointer;
+}
+.article-extended {
+    float: left;
+    width: 100%;
+}
+.article-extended p {
+    margin: 0 0 16px;
+    font-size: 16px;
+    line-height: 28px;
+}
+/* about page styling */
+.about-title {
+    padding: 16px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+.about-text {
+    padding: 0 0 16px;
+    font-size: 16px;
+    line-height: 28px;
+}
+.about-social {
+    display: flex;
+    justify-content: center;
+}
+.about-social li {
+    list-style: none;
+}
+.about-social img {
+    padding: 0 16px;
+    width: 60px;
+    height: 60px;
+}
+/* team page styling */
+.team-title {
+    padding: 16px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+.team-card {
+    float: left;
+    margin: 16px 0;
+}
+.team-card-image {
+    float: left;
+    width: 28%;
+    margin: 0 2% 0 0;
+}
+.team-card img {
+    border-radius: 50%;
+}
+.team-card-info {
+    float: left;
+    width: 68%;
+    margin: 0 1%;
+}
+.team-card-title {
+    padding: 0 0 8px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.team-card-text {
+    padding: 8px 0;
+    font-size: 16px;
+    line-height: 26px;
+}
+/* subscription page styling */
+.subscription-title {
+    padding: 16px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+.subscription-plans {
+    float: left;
+    width: 100%;
+    padding: 10px 0 20px;
+}
+.subscription-card {
+    float: left;
+    width: 80%;
+    margin: 0 10% 16px;
+    padding: 40px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+.subscription-card:nth-child(2) {
+    background-color: rgb(179, 209, 255);
+}
+.subscription-card:nth-child(1),
+.subscription-card:nth-child(3) {
+    border: 1px solid rgb(217, 217, 217);
+}
+.subscription-card-plan {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+.subscription-card-price {
+    padding: 20px 0;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(0, 92, 230);
+}
+.subscription-card-description {
+    font-size: 16px;
+    text-align: center;
+    line-height: 28px;
+}
+/* contactform page styling */
+.form-title {
+    float: left;
+    width: 90%;
+    margin: 10px 5%;
+    font-size: 20px;
+    font-weight: 700;
+}
+#contact-form {
+    float: left;
+    width: 90%;
+    margin: 0 5%;
+}
+#contact-form input,
+#contact-form label,
+#contact-form textarea {
+    float: left;
+    width: 100%;
+    margin: 4px 0;
+    font-size: 16px;
+}
+#contact-form input,
+#contact-form textarea {
+    padding: 6px;
+    border: 1px solid rgb(0, 92, 230);
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+}
+#contact-form input:focus,
+#contact-form textarea:focus {
+    margin: 3px 0;
+    border: 2px solid rgb(0, 92, 230);
+}
+#contact-form button {
+    float: left;
+    width: 50%;
+    margin: 6px 0;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 92, 230);
+    outline: none;
+    cursor: pointer;
+}
+.form-instructions {
+    font-size: 14px;
+    color: rgb(0, 92, 230);
+}
+#form-error {
+    float: left;
+    width: 100%;
+    color: rgb(255, 0, 0);
+}
+.submitted-data {
+    float: left;
+    width: 90%;
+    margin: 0 5%;
+}
+.submitted-data table {
+    float: left;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgb(242, 242, 242);
+    box-sizing: border-box;
+}
+.submitted-data table caption {
+    float: left;
+    padding: 4px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(0, 92, 230);
+}
+.submitted-data tr {
+    float: left;
+    width: 100%;
+    padding: 4px 0;
+    font-size: 16px;
+}
+.submitted-data td:nth-child(1) {
+    float: left;
+    width: 40%;
+}
+.submitted-data td:nth-child(2) {
+    float: left;
+    width: 60%;
+}
+/* contacts page styling */
+.contacts-title {
+    padding: 16px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+.contacts-heading {
+    width: 40%;
+    padding: 16px 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+.contacts-text {
+    width: 60%;
+    padding: 16px 0;
+    font-size: 16px;
+}
+.contacts-map {
+    float: left;
+    width: calc(100% - 16px);
+    margin: 8px;
+    height: 300px;
+}
+/* tablets styling */
+@media screen and (min-width: 768px) {
+    /* header styling */
+    header {
+        width: 80%;
+        margin: 50px 10% 0;
+    }
+    .logo {
+        margin: 12px 12px 0;
+    }
+    #menu {
+        width: 40px;
+        height: 40px;
+        margin: 10px 10px 0;
+    }
+    .search {
+        width: 70%;
+        margin: 10px 15%;
+    }
+    #search-result {
+        width: 70%;
+        margin: 0 15%;
+    }
+    /* main styling */
+    main {
+        width: 80%;
+        margin: 10px 10% 0;
+        padding: 10px;
+    }
+    /* sidebar styling */
+    aside {
+        width: 40%;
+    }
+    /* footer styling */
+    footer {
+        width: 80%;
+        padding: 10px 0;
+        margin: 10px 10% 50px;
+    }
+    footer nav ul {
+        justify-content: space-between;
+    }
+    /* home page styling */
+    .article-title {
+        font-size: 19px;
+    }
+    .article-text {
+        padding: 9px 0;
+        font-size: 17px;
+    }
+    .article-date {
+        font-size: 15px;
+    }
+    .article-button {
+        font-size: 17px;
+    }
+    .article-extended p {
+        font-size: 17px;
+        line-height: 29px;
+    }
+    /* about page styling */
+    .about-title {
+        padding: 18px 0;
+        font-size: 21px;
+    }
+    .about-text {
+        padding: 0 0 18px;
+        font-size: 17px;
+        line-height: 29px;
+    }
+    .about-social img {
+        padding: 0 18px;
+        width: 70px;
+        height: 70px;
+    }
+    /* team page styling */
+    .team-title {
+        padding: 18px 0;
+        font-size: 21px;
+    }
+    .team-card {
+        margin: 18px 0;
+    }
+    .team-card-title {
+        padding: 0 0 9px;
+        font-size: 19px;
+    }
+    .team-card-text {
+        padding: 9px 0;
+        font-size: 17px;
+        line-height: 27px;
+    }
+    /* subscription page styling */
+    .subscription-title {
+        padding: 18px 0;
+        font-size: 21px;
+    }
+    .subscription-card {
+        width: 70%;
+        margin: 0 15% 18px;
+        padding: 40px;
+    }
+    .subscription-card-plan {
+        font-size: 23px;
+    }
+    .subscription-card-price {
+        font-size: 29px;
+    }
+    .subscription-card-description {
+        font-size: 17px;
+    }
+    /* contactform page styling */
+    .form-title {
+        width: 80%;
+        margin: 10px 10%;
+        font-size: 21px;
+    }
+    #contact-form {
+        width: 80%;
+        margin: 0 10%;
+    }
+    #contact-form input,
+    #contact-form label,
+    #contact-form textarea {
+        font-size: 17px;
+    }
+    #contact-form button {
+        font-size: 17px;
+    }
+    .form-instructions {
+        font-size: 15px;
+    }
+    .submitted-data {
+        width: 80%;
+        margin: 0 10%;
+    }
+    .submitted-data table caption {
+        font-size: 19px;
+    }
+    .submitted-data tr {
+        font-size: 17px;
+    }
+    /* contacts page styling */
+    .contacts-title {
+        padding: 18px 0;
+        font-size: 21px;
+    }
+    .contacts-heading,
+    .contacts-text {
+        padding: 18px 0;
+        font-size: 17px;
+    }
+    .contacts-map {
+        height: 400px;
+    }
+}
+/* desktops styling */
+@media screen and (min-width: 992px) {
+    /* header styling */
+    header {
+        width: 80%;
+        margin: 100px 10% 0;
+    }
+    .logo {
+        margin: 12px 20px 8px;
+    }
+    #menu {
+        display: none;
+    }
+    .search {
+        width: auto;
+        margin: 10px 20px;
+    }
+    #search-input {
+        width: auto;
+    }
+    #search-result {
+        width: 60%;
+        margin: 0 20%;
+    }
+    /* main styling */
+    main {
+        width: calc(60% - 12px);
+        margin: 12px 12px 0 10%;
+        padding: 10px;
+    }
+    /* sidebar styling */
+    aside {
+        position: static;
+        display: block;
+        width: 20%;
+        height: auto;
+        margin: 12px 10% 0 0;
+    }
+    /* footer styling */
+    footer {
+        width: 80%;
+        padding: 10px 0;
+        margin: 12px 10% 100px;
+    }
+    footer nav ul {
+        width: 80%;
+        margin: 0 10%;
+    }
+    /* home page styling */
+    article {
+        margin: 10px;
+    }
+    .article-title {
+        font-size: 20px;
+    }
+    .article-text {
+        padding: 10px 0;
+        font-size: 18px;
+    }
+    .article-date {
+        padding: 8px 0;
+        font-size: 16px;
+    }
+    .article-button {
+        margin: -30px 2% 0 0;
+        padding: 8px 20px;
+        font-size: 18px;
+    }
+    .article-extended {
+        padding: 0 20px 0 0;
+        box-sizing: border-box;  
+    }
+    .article-extended p {
+        font-size: 18px;
+        margin: 12px 0;
+        line-height: 32px;
+    }
+    /* about page styling */
+    .about-title {
+        padding: 20px 0;
+        font-size: 22px;
+    }
+    .about-text {
+        padding: 0 0 20px;
+        font-size: 18px;
+        line-height: 32px;
+    }
+    .about-social {
+        margin: -30px 0 0;
+    }
+    .about-social img {
+        padding: 0 20px;
+        width: 80px;
+        height: 80px;
+    }
+    /* team page styling */
+    .team-title {
+        padding: 20px 0;
+        font-size: 22px;
+    }
+    .team-card {
+        margin: 20px 0;
+    }
+    .team-card-image {
+        width: 26%;
+        margin: 0 2%;
+    }
+    .team-card-info {
+        width: 66%;
+        margin: 0 2%;
+    }
+    .team-card-title {
+        padding: 10px 0;
+        font-size: 20px;
+    }
+    .team-card-text {
+        padding: 10px 0;
+        font-size: 18px;
+        line-height: 28px;
+    }
+    /* subscription page styling */
+    .subscription-title {
+        padding: 20px 0;
+        font-size: 22px;
+    }
+    .subscription-plans {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0 30px;
+    }
+    .subscription-card {
+        width: 32%;
+        margin: 0;
+    }
+    .subscription-card-plan {
+        font-size: 24px;
+    }
+    .subscription-card-price {
+        font-size: 30px;
+    }
+    .subscription-card-description {
+        font-size: 18px;
+    }
+    /* contactform page styling */
+    .form-title {
+        width: 70%;
+        margin: 10px 15%;
+        font-size: 22px;
+    }
+    #contact-form {
+        width: 70%;
+        margin: 0 15%;
+    }
+    #contact-form input,
+    #contact-form label,
+    #contact-form textarea {
+        font-size: 18px;
+    }
+    #contact-form button {
+        font-size: 18px;
+    }
+    .form-instructions {
+        font-size: 16px;
+    }
+    .submitted-data {
+        width: 70%;
+        margin: 0 15%;
+    }
+    .submitted-data table caption {
+        font-size: 22px;
+    }
+    .submitted-data tr {
+        font-size: 18px;
+    }
+    /* contacts page styling */
+    .contacts-title {
+        padding: 20px 0;
+        font-size: 22px;
+    }
+    .contacts-heading,
+    .contacts-text {
+        padding: 20px 0;
+        font-size: 18px;
+    }
+    .contacts-map {
+        height: 500px;
+    }
+}

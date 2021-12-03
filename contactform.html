@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="This website was created to fulfill Web Technology module’s requirements and does not represent an actual company or service">
+        <meta name="keywords" content="Travel Blog">
+        <link rel="stylesheet" type="text/css" href="styles/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <title>Travel Blog</title>
+    </head>
+    <body>
+        <!-- header html structure -->
+        <header>
+            <a href="index.html">
+                <div class="logo">Travel Blog</div>
+            </a>
+            <button id="menu">
+                <img id="menu-icon" src="images/menu.png" alt="menu">
+            </button>
+            <div class="search">
+                <form action="" method="post" id="search-form">
+                    <input type="text" name="search-input" id="search-input" placeholder="search article">
+                    <button type="submit" name="search-button" id="search-button">
+                        <img src="images/search.png" alt="search">
+                    </button>
+                </form>
+            </div>
+            <div id="search-result"></div>
+        </header>
+        <section>
+            <!-- main html structure -->
+            <main>
+                <h1 class="form-title">Contact us:</h1>
+                <form action="" method="post" id="contact-form">
+                    <label for="form-firstname">First name* <span class="form-instructions">(40 characters allowed)</span></label>
+                    <input type="text" name="form-firstname" id="form-firstname" required>
+                    <label for="form-lastname">Last name* <span class="form-instructions">(40 characters allowed)</span></label>
+                    <input type="text" name="form-lastname" id="form-lastname" required>
+                    <label for="form-phone">Phone number</label>
+                    <input type="tel" name="form-phone" id="form-phone">
+                    <label for="form-email">Email address</label>
+                    <input type="email" name="form-email" id="form-email">
+                    <label for="form-textarea">Your message <span class="form-instructions">(200 characters allowed)</span></label>
+                    <textarea name="form-textarea" id="form-textarea" rows="4"></textarea>
+                    <button type="submit" name="form-submit" id="form-submit">Submit</button>
+                    <span id="form-error"></span>
+                </form>
+                <div id="submitted-data" class="submitted-data"></div>
+            </main>
+            <!-- sidebar html structure -->
+            <aside>
+                <h1 class="links-heading">Useful links</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="team.html">Our team</a></li>
+                        <li><a href="subscription.html">Subscription</a></li>
+                        <li><a href="contactform.html" class="link-active">Contact form</a></li>
+                        <li><a href="contacts.html">Contact details</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </section>
+        <!-- footer html structure -->
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="team.html">Our team</a></li>
+                    <li><a href="subscription.html">Subscription</a></li>
+                    <li><a href="contactform.html">Contact form</a></li>
+                    <li><a href="contacts.html">Contact details</a></li>
+                </ul>
+            </nav>
+            <div class="footer-text">This website was created to fulfill Web Technology module’s requirements and does not represent an actual company or service</div>
+            <div class="footer-text">&#169;Copyright 2021</div>
+        </footer>
+        <script src="scripts/scripts.js"></script>
+        <script src="scripts/menu.js"></script>
+        <script src="scripts/formvalidation.js"></script>
+    </body>
+</html>

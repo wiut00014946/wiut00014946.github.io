@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="This website was created to fulfill Web Technology module’s requirements and does not represent an actual company or service">
+        <meta name="keywords" content="Travel Blog">
+        <link rel="stylesheet" type="text/css" href="styles/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <title>Travel Blog</title>
+    </head>
+    <body>
+        <!-- header html structure -->
+        <header>
+            <a href="index.html">
+                <div class="logo">Travel Blog</div>
+            </a>
+            <button id="menu">
+                <img id="menu-icon" src="images/menu.png" alt="menu">
+            </button>
+            <div class="search">
+                <form action="" method="post" id="search-form">
+                    <input type="text" name="search-input" id="search-input" placeholder="search article">
+                    <button type="submit" name="search-button" id="search-button">
+                        <img src="images/search.png" alt="search">
+                    </button>
+                </form>
+            </div>
+            <div id="search-result"></div>
+        </header>
+        <section>
+            <!-- main html structure -->
+            <main>
+                <div class="about-image"><img src="images/travelling.jpg" alt="travelling"></div>
+                <h1 class="about-title">About Travel Blog</h1>
+                <div class="about-text">Travel Blog is a free online travel diary for travellers around the world. This blog is a web based journal with its content mostly focusing on travelling and adventures. In Travel Blog you can find many useful articles for those who travel a lot or are willing to travel in the nearest future.</div>
+                <div class="about-text">Travel Blog is an advertising supported online blog. This means that we offer our services free of charge for users. Instead, we focus on advertising as the primary source of income. However, we offer premium (paid) subscription for VIP users. This subscription allows users enjoy our services without being distracted by advertisements.</div>
+                <div class="about-text">In order to follow Travel Blog you only need stable internet connection and modern web browser. Let us handle rest of the job and enjoy your reading.</div>
+                <div class="about-title">Follow us:</div>
+                <ul class="about-social">
+                    <li><a href="https://www.facebook.com/"><img src="images/facebook.png" alt="facebook"></a></li>
+                    <li><a href="https://telegram.org/"><img src="images/telegram.png" alt="telegram"></a></li>
+                    <li><a href="https://www.youtube.com/"><img src="images/youtube.png" alt="youtube"></a></li>
+                </ul>
+            </main>
+            <!-- sidebar html structure -->
+            <aside>
+                <h1 class="links-heading">Useful links</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html" class="link-active">About us</a></li>
+                        <li><a href="team.html">Our team</a></li>
+                        <li><a href="subscription.html">Subscription</a></li>
+                        <li><a href="contactform.html">Contact form</a></li>
+                        <li><a href="contacts.html">Contact details</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </section>
+        <!-- footer html structure -->
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="team.html">Our team</a></li>
+                    <li><a href="subscription.html">Subscription</a></li>
+                    <li><a href="contactform.html">Contact form</a></li>
+                    <li><a href="contacts.html">Contact details</a></li>
+                </ul>
+            </nav>
+            <div class="footer-text">This website was created to fulfill Web Technology module’s requirements and does not represent an actual company or service</div>
+            <div class="footer-text">&#169;Copyright 2021</div>
+        </footer>
+        <script src="scripts/scripts.js"></script>
+        <script src="scripts/menu.js"></script>
+    </body>
+</html>

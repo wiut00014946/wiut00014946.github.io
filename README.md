@@ -21,4 +21,5 @@ The coursework files are hosted on GitHub and can be accessed throught the follo
     https://github.com/wiut00014946/web-technology-cw1
 
 Github pages are used for deploying the website and can be accessed throught the following link:
+    https://wiut00014946.github.io/
     https://github.com/wiut00014946/wiut00014946.github.io
